@@ -1,0 +1,16 @@
+{% extends 'devapp/index.html' %}
+
+{% block content %}
+    <div class="container text-center">
+        <h3>Avaible Authors</h3>
+        <table class="table table-hover">
+            {% for author in authors %}
+            <tr>
+                <td>{{ author }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+            {% include "devapp/snippets/filter_author.html" %}      
+    </div>
+    
+{% endblock content %}

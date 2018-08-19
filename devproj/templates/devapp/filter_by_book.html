@@ -1,0 +1,17 @@
+{% extends 'devapp/index.html' %}
+
+{% block content %}
+
+    <div class="container">
+            <h3>Avaible Books</h3>
+            <table class="table table-hover">
+                {% for book in books %}
+                <tr>
+                    <td>{{ book }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        {% include "devapp/snippets/filter_book.html" %}
+    </div>
+    
+{% endblock content %}
